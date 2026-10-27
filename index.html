@@ -47,9 +47,16 @@ ul#list li:active{background:#ffffff10}
 .info .t{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .info .a{font-size:12px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .info .n{font-size:11px;color:#64748b}
-.play{flex:none;font-size:13px;font-weight:700;color:var(--accent);padding:6px 8px}
+.mark{flex:none;font-size:11px;font-weight:700;padding:3px 7px;border-radius:999px;line-height:1.3;white-space:nowrap}
+.mark.ok{background:#1db954;color:#04140a}
+.mark.no{background:#334155;color:#94a3b8}
+li.unplayable{opacity:.58}
 li.cur{background:#f43f5e1f;border-radius:8px}
 li.cur .t{color:#fda4af;font-weight:700}
+.filterbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 10px;padding:8px 12px 0}
+.filterbar label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.filterbar input{width:18px;height:18px;accent-color:#1db954}
+#playableCount{font-size:12px;color:var(--sub)}
 .empty{padding:24px;text-align:center;color:var(--sub)}
 footer{padding:16px 14px;font-size:12px;color:var(--sub);line-height:1.6}
 footer a{color:#93c5fd}
@@ -78,6 +85,10 @@ footer a{color:#93c5fd}
 </nav>
 <p id="chartLabel" class="chart-label">유튜브 주간 순위</p>
 <div class="search"><input id="q" type="search" placeholder="곡 또는 가수 검색 (예: IVE, 퇴사)" autocomplete="off"></div>
+<div class="filterbar">
+  <label for="playableOnly"><input id="playableOnly" type="checkbox" checked> 재생되는 곡만 보기</label>
+  <span id="playableCount"></span>
+</div>
 <ul id="list"></ul>
 
 <footer>
@@ -90,20 +101,47 @@ footer a{color:#93c5fd}
 <script>
 var DATA = {"collected": "2026-10-27", "yt": [{"rank": 1, "id": "D968qfUZMUE", "title": "NEON", "artist": "A2O LITE"}, {"rank": 2, "id": "GxChUrrY4bc", "title": "꿈꾸던 어른이 되었나요?", "artist": "머무르 (MEOMURU)"}, {"rank": 3, "id": "7mDDM0eBWR0", "title": "퇴사할게여 (Narr. 기안84)", "artist": "소연 (SOYEON)"}, {"rank": 4, "id": "pTziJ4RaYnk", "title": "미장센 (Mise en scène)", "artist": "에픽하이 x 다비치"}, {"rank": 5, "id": "rsNhWkC4neE", "title": "Looks Can Kill", "artist": "IVE"}, {"rank": 6, "id": "-q_S27LbNKU", "title": "BAD", "artist": "ATEEZ"}, {"rank": 7, "id": "9XttLI0oH0I", "title": "LOVE ATTACK", "artist": "RESCENE"}, {"rank": 8, "id": "83C3TZ4Zm_o", "title": "LEMONADE", "artist": "aespa"}, {"rank": 9, "id": "qZlu2j2SiBA", "title": "Pretty Girl", "artist": "RESCENE"}, {"rank": 10, "id": "ZbO9PBdFRdc", "title": "Deja Vu", "artist": "RESCENE"}, {"rank": 11, "id": "U6BDbXIah-Y", "title": "REDRED", "artist": "CORTIS"}, {"rank": 12, "id": "F7sGJVUrkjQ", "title": "RUDE!", "artist": "Hearts2Hearts"}, {"rank": 13, "id": "bMhDJ0S0OBA", "title": "It's Me", "artist": "ILLIT"}, {"rank": 14, "id": "lQ-w9M447w0", "title": "CRASH", "artist": "ALLDAY PROJECT"}, {"rank": 15, "id": "35w8SrlepLc", "title": "생각을 멈추다 보면 (라이브)", "artist": "최유리"}, {"rank": 16, "id": "NPqtL1dtrlA", "title": "연애의 조건", "artist": "BESTie"}, {"rank": 17, "id": "IAURqrShEUQ", "title": "SUPERSTAR", "artist": "A2O SOUL"}, {"rank": 18, "id": "6ruo4VVRjvo", "title": "체포하겠어 (You're Under Arrest) (라이브)", "artist": "ILLIT"}, {"rank": 19, "id": "Jxgbfc89hNI", "title": "갑자기", "artist": "I.O.I"}, {"rank": 20, "id": "8aKR2Ho--5k", "title": "GO HARD", "artist": "MEOVV"}, {"rank": 21, "id": "6Ycn9qZK09I", "title": "Heavy Serenade", "artist": "NMIXX"}, {"rank": 22, "id": "NwLxMQtlKDY", "title": "모이세 (Moise)", "artist": "임영웅"}, {"rank": 23, "id": "roHWN9fL2SM", "title": "긴 소원 (Birthday Wish)", "artist": "NMIXX"}, {"rank": 24, "id": "B8JJ8RNM-60", "title": "Pinball", "artist": "RESCENE"}, {"rank": 25, "id": "bSs1gepe_cY", "title": "삐그덕 (Feat. 아이유)", "artist": "크러쉬"}, {"rank": 26, "id": "VVO05mYGFY8", "title": "만찬가 (Bansanka)", "artist": "태연 (TAEYEON)"}, {"rank": 27, "id": "ItSKahBISg0", "title": "캐치 캐치", "artist": "최예나 (YENA)"}, {"rank": 28, "id": "UsbRoaH6y-Q", "title": "Pop Off Pop Off", "artist": "KiiiKiii"}, {"rank": 29, "id": "EIc13cn7tWo", "title": "Nostalgia", "artist": "BIG Naughty"}, {"rank": 30, "id": "chl0R8C4NJ8", "title": "ICONIC HEART", "artist": "Hearts2Hearts"}, {"rank": 31, "id": "RdUV9Ms5GM4", "title": "Dear my crazy soulmate", "artist": "아이유 (IU)"}, {"rank": 32, "id": "d6rrtRhN9YM", "title": "또또", "artist": "임영웅"}, {"rank": 33, "id": "46h0LvDHgIs", "title": "SUN KISS", "artist": "TUIDE (튜이드)"}, {"rank": 34, "id": "jHQF6OeLlB4", "title": "부디 행복해질 것", "artist": "임영웅"}, {"rank": 35, "id": "TBmE7m0yEwY", "title": "Star Trace", "artist": "PLAVE"}, {"rank": 36, "id": "xIlFjHHUfI0", "title": "I SPY", "artist": "NCT WISH"}, {"rank": 37, "id": "tYzAC-pYkyM", "title": "BAD HABITS TONITE", "artist": "A2O MAY"}, {"rank": 38, "id": "oAwzFFEYm38", "title": "Skibidi", "artist": "소녀시대-효리수"}, {"rank": 39, "id": "XPUOHpkRAxg", "title": "마음의 숲", "artist": "조선힙합"}, {"rank": 40, "id": "zhHB4dZTChw", "title": "404 (New Era)", "artist": "KiiiKiii"}, {"rank": 41, "id": "gYAduKnFHG4", "title": "잔불 (Still)", "artist": "엔플라잉 (N.Flying)"}, {"rank": 42, "id": "EKEts5IShas", "title": "별이 시작되는 곳", "artist": "ABYSS (스텔라이브)"}, {"rank": 43, "id": "T6hOlik58gg", "title": "High Forever (Marlon Hoffstadt Remix)", "artist": "Petite Meller"}, {"rank": 44, "id": "R53dDlmY3wo", "title": "Baila", "artist": "임영웅"}, {"rank": 45, "id": "x6_mbnsh6VU", "title": "STORM", "artist": "GENER8ION"}, {"rank": 46, "id": "8la3SuNxpPQ", "title": "크게 울어라", "artist": "로이킴"}, {"rank": 47, "id": "E5BLkMGxDgQ", "title": "Forever Has Always Been", "artist": "Redoor (리도어)"}, {"rank": 48, "id": "L8ZnXgbyUuc", "title": "BiiiG", "artist": "BIGBANG"}, {"rank": 49, "id": "Y1Lah0BM0KQ", "title": "Made My Night", "artist": "LE SSERAFIM"}, {"rank": 50, "id": "lu9GinsuyUQ", "title": "Next Chapter", "artist": "Hearts2Hearts"}], "ig": [{"rank": 1, "id": "bSs1gepe_cY", "title": "삐그덕 (Feat. 아이유)", "artist": "크러쉬", "note": "릴스 8위 · 10/25 기준"}, {"rank": 2, "id": "WI4__7z_dJw", "title": "ANIMAL", "artist": "BOYNEXTDOOR", "note": "릴스 20위 · 10/1 기준"}, {"rank": 3, "id": "Lufa9QAFFeY", "title": "new trick", "artist": "ROSÉ", "note": "릴스 1위 · 9/22 기준"}, {"rank": 4, "id": "cdW2AOtSM8A", "title": "right here", "artist": "i don't like mirrors", "note": "릴스 3위 · 9/22 기준"}, {"rank": 5, "id": "AqFJZluGEJM", "title": "It's so Nice to Be Happy", "artist": "Futemys", "note": "릴스 4위 · 9/22 기준"}, {"rank": 6, "id": "MZ5zQd6imuw", "title": "빙글빙글", "artist": "나미", "note": "릴스 6위 · 9/22 기준"}, {"rank": 7, "id": "WGTrgrmalxE", "title": "꺾어 (GOGO)", "artist": "영탁", "note": "릴스 7위 · 9/22 기준"}, {"rank": 8, "id": "iNMvUYjaieA", "title": "Death of Me", "artist": "EVAN (에반)", "note": "릴스 20위 · 9/22 기준"}, {"rank": 9, "id": "Aq_gsctWHtQ", "title": "EVERYTHING", "artist": "검정치마", "note": "릴스 15위 · 9/22 기준"}, {"rank": 10, "id": "bh8g3-R_Wy4", "title": "매일 행복한 일만 가득할 당신에게", "artist": "E:um", "note": "릴스 23위 · 9/22 기준"}, {"rank": 11, "id": "SBUG91NLG5Q", "title": "Yummy Little Day", "artist": "emilogue", "note": "릴스 14위 · 9/22 기준"}, {"rank": 12, "id": "EErSKhC0CZs", "title": "You Make My Dreams (Come True)", "artist": "Daryl Hall & John Oates", "note": "릴스 21위 · 9/22 기준"}, {"rank": 13, "id": "Po0BbGMSX4g", "title": "Upside Down", "artist": "Diana Ross", "note": "릴스 22위 · 9/22 기준"}, {"rank": 14, "id": "nP1xjFX86Po", "title": "이 별로부터 (Unknown Planet)", "artist": "아이유 (IU)", "note": "릴스 25위 · 9/22 기준"}, {"rank": 15, "id": "V3b1JrAl_1Q", "title": "Guitarist", "artist": "도경수 (D.O.)", "note": "릴스 26위 · 9/22 기준"}, {"rank": 16, "id": "3sB4Iv_tM7U", "title": "Nicole Kidman", "artist": "ADÉLA", "note": "릴스 29위 · 9/22 기준"}, {"rank": 17, "id": "w9_-SCFNeag", "title": "L.O.V.E.", "artist": "Michael Bublé", "note": "릴스 30위 · 9/22 기준"}, {"rank": 18, "id": "b7RTL7tJKWo", "title": "냉탕에 상어 (Feat. 블랙넛)", "artist": "슈퍼비 (Superbee)", "note": "릴스 31위 · 9/22 기준"}, {"rank": 19, "id": "UWPGeexwmto", "title": "너가 최고야", "artist": "YS Block", "note": "릴스 32위 · 9/22 기준"}, {"rank": 20, "id": "1cKc1rkZwf8", "title": "예술이야 (IT'S ART)", "artist": "싸이 (PSY)", "note": "릴스 34위 · 9/22 기준"}, {"rank": 21, "id": "5AgDZcM8In8", "title": "Lil Boo Thang", "artist": "Paul Russell", "note": "릴스 35위 · 9/22 기준"}, {"rank": 22, "id": "jhOVibLEDhA", "title": "Koi (恋)", "artist": "星野源 (Gen Hoshino)", "note": "릴스 36위 · 9/22 기준"}, {"rank": 23, "id": "9XttLI0oH0I", "title": "LOVE ATTACK", "artist": "RESCENE", "note": "릴스 40위 · 9/22 기준"}, {"rank": 24, "id": "TiOpGgCXeT0", "title": "너", "artist": "ycs (SYSTEM SEOUL)", "note": "릴스 42위 · 9/22 기준"}, {"rank": 25, "id": "Q53TqpuiCqU", "title": "ENOuGH (feat. Bazzi)", "artist": "홍중 (ATEEZ)", "note": "릴스 44위 · 9/22 기준"}, {"rank": 26, "id": "wmluyZkfFVU", "title": "사계, 그리고 너", "artist": "이창섭", "note": "릴스 45위 · 9/22 기준"}, {"rank": 27, "id": "B8JJ8RNM-60", "title": "Pinball", "artist": "RESCENE", "note": "릴스 46위 · 9/22 기준"}]};
 var tab = 'yt', queue = [], curId = null, iframeApi = null, embed = null, embedBusy = false;
+var PLAY_KEY = 'dongjin-playable-only';
 var $ = function(id){return document.getElementById(id);};
 $('date').textContent = DATA.collected.replace(/-/g,'.');
+try{
+  var saved=localStorage.getItem(PLAY_KEY);
+  if(saved!==null) $('playableOnly').checked=saved==='1';
+}catch(e){}
 
 function songsOf(t){return DATA[t];}
 function find(id){var all=DATA.yt.concat(DATA.ig);for(var i=0;i<all.length;i++)if(all[i].id===id)return all[i];return null;}
-function filtered(){var k=$('q').value.trim().toLowerCase();return songsOf(tab).filter(function(s){return !k||(s.title+' '+s.artist).toLowerCase().indexOf(k)>=0;});}
+function canPlay(s){return !!(s&&s.spotifyId);}
+function playableOnlyOn(){return !!($('playableOnly')&&$('playableOnly').checked);}
+function filtered(){
+  var k=$('q').value.trim().toLowerCase();
+  return songsOf(tab).filter(function(s){
+    if(playableOnlyOn()&&!canPlay(s)) return false;
+    return !k||(s.title+' '+s.artist).toLowerCase().indexOf(k)>=0;
+  });
+}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function updatePlayableCount(){
+  var all=songsOf(tab)||[];
+  var n=all.filter(canPlay).length;
+  var el=$('playableCount');
+  if(el) el.textContent=n+'곡 재생 가능 / '+all.length+'곡';
+}
 
 function render(){
+  updatePlayableCount();
   var items=filtered(), ul=$('list');
-  if(!items.length){ul.innerHTML='<li class="empty" style="cursor:default;justify-content:center">검색 결과가 없어요</li>';return;}
+  if(!items.length){
+    var empty=($('q').value.trim()?'검색 결과가 없어요':'재생되는 곡이 없어요');
+    ul.innerHTML='<li class="empty" style="cursor:default;justify-content:center">'+empty+'</li>';
+    return;
+  }
   ul.innerHTML=items.map(function(s){
     var cur=s.id===curId;
-    return '<li data-id="'+s.id+'"'+(cur?' class="cur"':'')+'><span class="rank">'+s.rank+'</span><div class="info"><div class="t">'+esc(s.title)+'</div><div class="a">'+esc(s.artist)+'</div>'+(s.note?'<div class="n">'+esc(s.note)+'</div>':'')+'</div><span class="play">'+(cur?'♪ 듣는 중':'▶ 듣기')+'</span></li>';
+    var playable=canPlay(s);
+    var mark=playable?(cur?'♪ 듣는 중':'▶ 재생'):'재생불가';
+    var cls=(cur?'cur':'')+(playable?'':' unplayable');
+    return '<li data-id="'+s.id+'"'+(cls?' class="'+cls.trim()+'"':'')+'><span class="rank">'+s.rank+'</span><div class="info"><div class="t">'+esc(s.title)+'</div><div class="a">'+esc(s.artist)+'</div>'+(s.note?'<div class="n">'+esc(s.note)+'</div>':'')+'</div><span class="mark '+(playable?'ok':'no')+'">'+mark+'</span></li>';
   }).join('');
 }
 
@@ -180,32 +218,52 @@ function updateNow(s){
   $('nowT').textContent=s.title;$('nowA').textContent=s.artist;document.title=s.title+' · 동진 뮤직';
   if('mediaSession' in navigator){try{navigator.mediaSession.metadata=new MediaMetadata({title:s.title,artist:s.artist,album:'동진 뮤직'});}catch(e){}}
 }
+function playableIds(){return filtered().filter(canPlay).map(function(s){return s.id;});}
 function play(id,fromList){
   var s=find(id);if(!s)return;
   curId=id;
-  if(fromList){queue=filtered().map(function(x){return x.id;});}
+  if(fromList) queue=playableIds();
   updateNow(s);render();setMsg('');
   loadSpotify(s);
   window.scrollTo({top:0,behavior:'smooth'});
 }
+function navList(){
+  var k=$('q').value.trim().toLowerCase();
+  return songsOf(tab).filter(function(s){
+    return !k||(s.title+' '+s.artist).toLowerCase().indexOf(k)>=0;
+  });
+}
 function step(d){
-  if(!queue.length)queue=filtered().map(function(x){return x.id;});
-  if(!queue.length)return;
-  var i=queue.indexOf(curId);
-  var n=i<0?(d>0?0:queue.length-1):(i+d+queue.length)%queue.length;
-  play(queue[n],false);
+  var list=navList();
+  var start=-1;
+  for(var i=0;i<list.length;i++) if(list[i].id===curId){start=i;break;}
+  if(start<0){
+    var ids=playableIds();
+    if(!ids.length) return;
+    play(d>0?ids[0]:ids[ids.length-1],false);
+    return;
+  }
+  for(var k=1;k<=list.length;k++){
+    var j=(start+d*k)%list.length;
+    if(j<0) j+=list.length;
+    if(canPlay(list[j])){play(list[j].id,false);return;}
+  }
 }
 $('next').onclick=function(){step(1);};
 $('prev').onclick=function(){step(-1);};
 $('toggle').onclick=function(){
-  if(!curId){var f=filtered();if(f.length)play(f[0].id,true);return;}
+  if(!curId){var ids=playableIds();if(ids.length)play(ids[0],true);return;}
   var s=find(curId);
-  if(!s||!s.spotifyId){setMsg('Spotify에서 이 곡을 찾지 못했어요. 아래 버튼으로 검색해 보세요.');return;}
+  if(!s||!canPlay(s)){setMsg('Spotify에서 이 곡을 찾지 못했어요. 아래 버튼으로 검색해 보세요.');return;}
   if(!embed){loadSpotify(s);return;}
   try{embed.togglePlay();}catch(err){}
 };
 $('list').onclick=function(e){var li=e.target.closest('li[data-id]');if(li)play(li.getAttribute('data-id'),true);};
 $('q').oninput=render;
+$('playableOnly').onchange=function(){
+  try{localStorage.setItem(PLAY_KEY,this.checked?'1':'0');}catch(err){}
+  render();
+};
 function setTab(t){tab=t;$('tab-yt').setAttribute('aria-selected',t==='yt');$('tab-ig').setAttribute('aria-selected',t==='ig');$('q').value='';updateChartLabel();render();}
 $('tab-yt').onclick=function(){setTab('yt');};
 $('tab-ig').onclick=function(){setTab('ig');};
