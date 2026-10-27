@@ -5,3 +5,5 @@
 사이트: https://dongjin3715-cmd.github.io/1111/
 
 홈 화면에 추가하면 앱처럼 전체 화면으로 열 수 있습니다.
+
+GitHub Actions로 배포됩니다.
