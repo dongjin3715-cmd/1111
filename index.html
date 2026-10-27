@@ -73,16 +73,16 @@ footer a{color:#93c5fd}
 </header>
 
 <nav class="tabs" role="tablist">
-  <button role="tab" id="tab-yt" aria-selected="true">유튜브 일간 순위</button>
+  <button role="tab" id="tab-yt" aria-selected="true">주간 50</button>
   <button role="tab" id="tab-ig" aria-selected="false">인스타 릴스 인기곡</button>
 </nav>
-<p id="chartLabel" class="chart-label">유튜브 일간 순위</p>
+<p id="chartLabel" class="chart-label">유튜브 주간 순위</p>
 <div class="search"><input id="q" type="search" placeholder="곡 또는 가수 검색 (예: IVE, 퇴사)" autocomplete="off"></div>
 <ul id="list"></ul>
 
 <footer>
   <div>자료 모은 날: <b id="date"></b></div>
-  <div>유튜브 목록: 한국 일간 인기곡 (<a href="https://kworb.net/youtube/insights/kr_daily.html" target="_blank" rel="noopener">kworb.net</a> YouTube 일간 차트). 인스타 목록: 한국 릴스 '인기 상승 오디오' 순위(<a href="https://sports.donga.com/ent/article/all/20261025/134902002/1" target="_blank" rel="noopener">스포츠동아 10/25</a>, <a href="https://www.slist.kr/news/articleView.html?idxno=770194" target="_blank" rel="noopener">싱글리스트 10/1</a>, <a href="https://issueitnow.com/kr/instagram/" target="_blank" rel="noopener">issueitnow 9/22 앱 확인</a>). 곡마다 기준일이 달라요.</div>
+  <div>유튜브 목록: 한국 주간 인기곡 Top 50 (<a href="https://kworb.net/youtube/insights/kr.html" target="_blank" rel="noopener">kworb.net</a> YouTube 주간 차트). 인스타 목록: 한국 릴스 '인기 상승 오디오' 순위(<a href="https://sports.donga.com/ent/article/all/20261025/134902002/1" target="_blank" rel="noopener">스포츠동아 10/25</a>, <a href="https://www.slist.kr/news/articleView.html?idxno=770194" target="_blank" rel="noopener">싱글리스트 10/1</a>, <a href="https://issueitnow.com/kr/instagram/" target="_blank" rel="noopener">issueitnow 9/22 앱 확인</a>). 곡마다 기준일이 달라요.</div>
   <div>📱 아이폰은 첫 재생을 한 번 직접 눌러야 하고, 화면이 꺼지면 다음 곡 자동 재생이 멈출 수 있어요.</div>
   <div>재생은 Spotify 임베드 플레이어로 해요. 휴대폰 브라우저는 미리듣기만 될 수 있어서, 이어서 들으려면 ‘스포티파이 앱에서 열기’를 누르세요. 음원을 내려받지 않아요.</div>
 </footer>
@@ -115,14 +115,18 @@ function spotifyHref(s){
   return 'https://open.spotify.com/search/'+encodeURIComponent(q);
 }
 function setOpen(s){$('openSpotify').href=spotifyHref(s);}
-function chartDay(){return String(DATA.chartDate||DATA.updatedAt||DATA.collected||'').slice(0,10);}
+function chartWeekText(){
+  var week=String(DATA.chartWeek||DATA.chartDate||'');
+  var m=week.match(/\d{4}-\d{2}-\d{2}/);
+  return m?m[0]:'';
+}
 function updateChartLabel(){
   var el=$('chartLabel'); if(!el) return;
   var show=tab==='yt';
   el.hidden=!show;
   if(!show) return;
-  var day=chartDay();
-  el.textContent=day?('유튜브 일간 순위 · '+day+' 기준'):'유튜브 일간 순위';
+  var week=chartWeekText();
+  el.textContent=week?('유튜브 주간 순위 · '+week+' 기준'):'유튜브 주간 순위';
 }
 function hideEmbed(){
   var frame=document.querySelector('#player-wrap iframe');
@@ -219,6 +223,7 @@ function applyRemote(data){
   if(!data||!Array.isArray(data.yt)||data.yt.length<1) return;
   DATA.yt=data.yt;
   if(Array.isArray(data.ig)&&data.ig.length) DATA.ig=data.ig;
+  if(data.chartWeek) DATA.chartWeek=data.chartWeek;
   if(data.chartDate) DATA.chartDate=data.chartDate;
   if(data.updatedAt) DATA.updatedAt=data.updatedAt;
   if(data.collected) DATA.collected=data.collected;

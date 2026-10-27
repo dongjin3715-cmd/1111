@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-27T19:09:35+09:00",
+ "updatedAt": "2026-10-27T19:39:13+09:00",
  "entries": {
   "tarantino|lisa": {
    "spotifyId": "3bgnrHHwyYRtz3ykzAVImy",
@@ -108,6 +108,192 @@
    "title": "Pinball",
    "artist": "RESCENE",
    "source": "kr_daily"
+  },
+  "crash|allday project": {
+   "spotifyId": "1hXVB56zx5oM7KUJsFRTxy",
+   "title": "CRASH",
+   "artist": "ALLDAY PROJECT",
+   "source": "kr_weekly"
+  },
+  "superstar|a2o": {
+   "spotifyId": "1DWMei2F4L94avyzZh3Ms9",
+   "title": "SUPERSTAR",
+   "artist": "A2O",
+   "source": "kr_weekly"
+  },
+  "go hard|meovv": {
+   "spotifyId": "4CjNGe0SrasxoAhzuqrXoB",
+   "title": "GO HARD",
+   "artist": "MEOVV",
+   "source": "kr_weekly"
+  },
+  "heavy serenade|nmixx": {
+   "spotifyId": "1Sjs93mMgi9bX06FFU9Mcv",
+   "title": "Heavy Serenade",
+   "artist": "NMIXX",
+   "source": "kr_weekly"
+  },
+  "moise|lim young woong": {
+   "spotifyId": "1XP3q0p7HL1SKIXiHJ7TRI",
+   "title": "Moise",
+   "artist": "Lim Young Woong",
+   "source": "kr_weekly"
+  },
+  "긴 소원|nmixx": {
+   "spotifyId": "4EpUJbdObAoylk1004aMG3",
+   "title": "긴 소원 (Birthday Wish)",
+   "artist": "NMIXX",
+   "source": "kr_weekly"
+  },
+  "bansanka|taeyeon": {
+   "spotifyId": "0KgetoSLg8qfJWIwoAQxBf",
+   "title": "Bansanka",
+   "artist": "TAEYEON",
+   "source": "kr_weekly"
+  },
+  "pop off pop off|kiiikiii": {
+   "spotifyId": "0USn5f2VZGbHjHkbjcijzU",
+   "title": "Pop Off Pop Off",
+   "artist": "KiiiKiii",
+   "source": "kr_weekly"
+  },
+  "nostalgia|big naughty": {
+   "spotifyId": "776vLcNy6mHNmPisdejR0I",
+   "title": "Nostalgia",
+   "artist": "BIG Naughty",
+   "source": "kr_weekly"
+  },
+  "iconic heart|hearts2hearts": {
+   "spotifyId": "1OLAjffdDJibTrUGAwApVk",
+   "title": "ICONIC HEART",
+   "artist": "Hearts2Hearts",
+   "source": "kr_weekly"
+  },
+  "dear my crazy soulmate|iu": {
+   "spotifyId": "0cbgFMxCXMzs80R2vxwApT",
+   "title": "Dear my crazy soulmate",
+   "artist": "IU",
+   "source": "kr_weekly"
+  },
+  "sun kiss|tuide": {
+   "spotifyId": "7Jpb9OejYYIwsBIVQwceRy",
+   "title": "SUN KISS",
+   "artist": "TUIDE (튜이드)",
+   "source": "kr_weekly"
+  },
+  "please be happy|lim young woong": {
+   "spotifyId": "05m8pjsNyv5A2IYf5rndNt",
+   "title": "Please Be Happy",
+   "artist": "Lim Young Woong",
+   "source": "kr_weekly"
+  },
+  "star trace|plave": {
+   "spotifyId": "1fI7jgWKJ41xELohFnVFp7",
+   "title": "Star Trace",
+   "artist": "PLAVE",
+   "source": "kr_weekly"
+  },
+  "i spy|nct wish": {
+   "spotifyId": "3kcGkOmFXtaFjVdz7ge1WL",
+   "title": "I SPY",
+   "artist": "NCT WISH",
+   "source": "kr_weekly"
+  },
+  "skibidi|girls generation hrs": {
+   "spotifyId": "2L1dsjU3R3U4SX27qIiPrq",
+   "title": "Skibidi",
+   "artist": "Girls' Generation-HRS",
+   "source": "kr_weekly"
+  },
+  "404|kiiikiii": {
+   "spotifyId": "24rDDbSlFY9OHrlJb48CRh",
+   "title": "404 (New Era)",
+   "artist": "KiiiKiii",
+   "source": "kr_weekly"
+  },
+  "잔불|n flying": {
+   "spotifyId": "7zBgJna8XcUyg7IIgpPEGq",
+   "title": "잔불 (Still)",
+   "artist": "N.Flying",
+   "source": "kr_weekly"
+  },
+  "baila|lim young woong": {
+   "spotifyId": "2A4rVwAcshN397FH3DVKNu",
+   "title": "Baila",
+   "artist": "Lim Young Woong",
+   "source": "kr_weekly"
+  },
+  "storm|gener8ion": {
+   "spotifyId": "4ipD5CMmWkehabGlAGTOBB",
+   "title": "STORM",
+   "artist": "GENER8ION",
+   "source": "artist"
+  },
+  "forever has always been|redoor": {
+   "spotifyId": "3tbHqU6PKS2bIGWx9cn082",
+   "title": "Forever Has Always Been",
+   "artist": "Redoor",
+   "source": "kr_weekly"
+  },
+  "biiig|bigbang": {
+   "spotifyId": "4pZi0VxU2C8zuxCYfEtFuL",
+   "title": "BiiiG",
+   "artist": "BIGBANG",
+   "source": "kr_weekly"
+  },
+  "made my night|le sserafim": {
+   "spotifyId": "5MOIAV008posdOGmxiJBsi",
+   "title": "Made My Night",
+   "artist": "LE SSERAFIM",
+   "source": "kr_weekly_totals"
+  },
+  "next chapter|hearts2hearts": {
+   "spotifyId": "4IdtNJqm7zVBwvN5jIUOYo",
+   "title": "Next Chapter",
+   "artist": "Hearts2Hearts",
+   "source": "kr_daily_totals"
+  },
+  "animal|boynextdoor": {
+   "spotifyId": "3U7iIHygNSOcjcL98KwHQg",
+   "title": "ANIMAL",
+   "artist": "BOYNEXTDOOR",
+   "source": "kr_weekly_totals"
+  },
+  "new trick|ros": {
+   "spotifyId": "5GKBPdWbW4RQtx9VkQ6xKO",
+   "title": "new trick",
+   "artist": "ROSÉ",
+   "source": "kr_weekly_totals"
+  },
+  "you make my dreams|daryl hall john oates": {
+   "spotifyId": "4o6BgsqLIBViaGVbx5rbRk",
+   "title": "You Make My Dreams (Come True)",
+   "artist": "Daryl Hall & John Oates",
+   "source": "global_daily_totals"
+  },
+  "upside down|diana ross": {
+   "spotifyId": "3pbtBomO4Zt5gGiqsYeiBH",
+   "title": "Upside Down",
+   "artist": "Diana Ross",
+   "source": "global_weekly_totals"
+  },
+  "guitarist|도경수": {
+   "spotifyId": "75MJ2d8AmBWgf2yeZACwpa",
+   "title": "Guitarist",
+   "artist": "도경수 (D.O.)",
+   "source": "kr_weekly_totals"
+  },
+  "lil boo thang|paul russell": {
+   "spotifyId": "0cVyQfDyRnMJ0V3rjjdlU3",
+   "title": "Lil Boo Thang",
+   "artist": "Paul Russell",
+   "source": "global_weekly_totals"
+  },
+  "koi|星野源": {
+   "spotifyId": "1flvuaMS27JxpEBL0u2cWc",
+   "title": "Koi (恋)",
+   "artist": "星野源 (Gen Hoshino)",
+   "source": "artist"
   }
  }
 }

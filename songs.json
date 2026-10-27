@@ -1,141 +1,344 @@
 {
  "collected": "2026-10-27",
- "updatedAt": "2026-10-27T19:09:35+09:00",
- "chartDate": "2026-10-24",
+ "updatedAt": "2026-10-27T19:39:13+09:00",
+ "chartDate": "2026-10-22",
+ "chartWeek": "2026-10-22",
  "yt": [
   {
    "rank": 1,
    "id": "yt-1",
-   "title": "Tarantino",
-   "artist": "LISA",
-   "spotifyId": "3bgnrHHwyYRtz3ykzAVImy"
-  },
-  {
-   "rank": 2,
-   "id": "yt-2",
    "title": "NEON",
    "artist": "A2O",
    "spotifyId": "5PvLNQRNRj61y3CU4SFIY4"
   },
   {
-   "rank": 3,
-   "id": "yt-3",
+   "rank": 2,
+   "id": "yt-2",
    "title": "꿈꾸던 어른이 되었나요?",
    "artist": "MEOMURU"
   },
   {
-   "rank": 4,
-   "id": "yt-4",
+   "rank": 3,
+   "id": "yt-3",
    "title": "퇴사할게여",
    "artist": "SOYEON"
   },
   {
-   "rank": 5,
-   "id": "yt-5",
-   "title": "DESERVE",
-   "artist": "K-NIGHTCORE"
-  },
-  {
-   "rank": 6,
-   "id": "yt-6",
-   "title": "체포하겠어",
-   "artist": "ILLIT"
-  },
-  {
-   "rank": 7,
-   "id": "yt-7",
-   "title": "Looks Can Kill",
-   "artist": "IVE",
-   "spotifyId": "6DCc1MCY8fjkDPR9pMtJaN"
-  },
-  {
-   "rank": 8,
-   "id": "yt-8",
-   "title": "BAD",
-   "artist": "ATEEZ",
-   "spotifyId": "55UDXtbNJBAdTdUdbRu8T3"
-  },
-  {
-   "rank": 9,
-   "id": "yt-9",
-   "title": "삐그덕 (feat. IU)",
-   "artist": "Crush"
-  },
-  {
-   "rank": 10,
-   "id": "yt-10",
-   "title": "LOVE ATTACK",
-   "artist": "RESCENE",
-   "spotifyId": "6uosenLUNFZtOIih5T0qfV"
-  },
-  {
-   "rank": 11,
-   "id": "yt-11",
+   "rank": 4,
+   "id": "yt-4",
    "title": "Mise en scène",
    "artist": "Epik High",
    "spotifyId": "0wIwrT28ZIAHdJsTgKhAt9"
   },
   {
-   "rank": 12,
-   "id": "yt-12",
-   "title": "Drip",
+   "rank": 5,
+   "id": "yt-5",
+   "title": "Looks Can Kill",
+   "artist": "IVE",
+   "spotifyId": "6DCc1MCY8fjkDPR9pMtJaN"
+  },
+  {
+   "rank": 6,
+   "id": "yt-6",
+   "title": "BAD",
    "artist": "ATEEZ",
-   "spotifyId": "5JaMKAodzzLdFM2ARRTXb9"
+   "spotifyId": "55UDXtbNJBAdTdUdbRu8T3"
   },
   {
-   "rank": 13,
-   "id": "yt-13",
-   "title": "Pretty Girl",
+   "rank": 7,
+   "id": "yt-7",
+   "title": "LOVE ATTACK",
    "artist": "RESCENE",
-   "spotifyId": "26GehcyfHwgzfS0ok9yDYk"
+   "spotifyId": "6uosenLUNFZtOIih5T0qfV"
   },
   {
-   "rank": 14,
-   "id": "yt-14",
-   "title": "REDRED",
-   "artist": "CORTIS",
-   "spotifyId": "2fCwv2ppU5nTRTckomIGsd"
-  },
-  {
-   "rank": 15,
-   "id": "yt-15",
+   "rank": 8,
+   "id": "yt-8",
    "title": "LEMONADE",
    "artist": "aespa",
    "spotifyId": "6vjt2smGK75oc9r2OGFfgp"
   },
   {
-   "rank": 16,
-   "id": "yt-16",
+   "rank": 9,
+   "id": "yt-9",
+   "title": "Pretty Girl",
+   "artist": "RESCENE",
+   "spotifyId": "26GehcyfHwgzfS0ok9yDYk"
+  },
+  {
+   "rank": 10,
+   "id": "yt-10",
    "title": "Deja Vu",
    "artist": "RESCENE",
    "spotifyId": "1pBUzZE9PoKLoPxo6QxsG6"
   },
   {
-   "rank": 17,
-   "id": "yt-17",
+   "rank": 11,
+   "id": "yt-11",
+   "title": "REDRED",
+   "artist": "CORTIS",
+   "spotifyId": "2fCwv2ppU5nTRTckomIGsd"
+  },
+  {
+   "rank": 12,
+   "id": "yt-12",
    "title": "RUDE!",
    "artist": "Hearts2Hearts",
    "spotifyId": "0WA27lZzPKFJKAbiDRmQDc"
   },
   {
-   "rank": 18,
-   "id": "yt-18",
-   "title": "생각을 멈추다 보면",
-   "artist": "Choi Yu Ree"
-  },
-  {
-   "rank": 19,
-   "id": "yt-19",
+   "rank": 13,
+   "id": "yt-13",
    "title": "It's Me",
    "artist": "ILLIT",
    "spotifyId": "1D5L58KLBbceOynTP4DQnY"
   },
   {
+   "rank": 14,
+   "id": "yt-14",
+   "title": "CRASH",
+   "artist": "ALLDAY PROJECT",
+   "spotifyId": "1hXVB56zx5oM7KUJsFRTxy"
+  },
+  {
+   "rank": 15,
+   "id": "yt-15",
+   "title": "생각을 멈추다 보면",
+   "artist": "Choi Yu Ree"
+  },
+  {
+   "rank": 16,
+   "id": "yt-16",
+   "title": "연애의 조건",
+   "artist": "BESTie(베스티)"
+  },
+  {
+   "rank": 17,
+   "id": "yt-17",
+   "title": "SUPERSTAR",
+   "artist": "A2O",
+   "spotifyId": "1DWMei2F4L94avyzZh3Ms9"
+  },
+  {
+   "rank": 18,
+   "id": "yt-18",
+   "title": "체포하겠어(Live)",
+   "artist": "ILLIT"
+  },
+  {
+   "rank": 19,
+   "id": "yt-19",
+   "title": "갑자기",
+   "artist": "I.O.I"
+  },
+  {
    "rank": 20,
    "id": "yt-20",
-   "title": "Drowning",
-   "artist": "WOODZ",
-   "spotifyId": "4xeugB5MqWh0jwvXZPxahq"
+   "title": "GO HARD",
+   "artist": "MEOVV",
+   "spotifyId": "4CjNGe0SrasxoAhzuqrXoB"
+  },
+  {
+   "rank": 21,
+   "id": "yt-21",
+   "title": "Heavy Serenade",
+   "artist": "NMIXX",
+   "spotifyId": "1Sjs93mMgi9bX06FFU9Mcv"
+  },
+  {
+   "rank": 22,
+   "id": "yt-22",
+   "title": "Moise",
+   "artist": "Lim Young Woong",
+   "spotifyId": "1XP3q0p7HL1SKIXiHJ7TRI"
+  },
+  {
+   "rank": 23,
+   "id": "yt-23",
+   "title": "긴 소원 (Birthday Wish)",
+   "artist": "NMIXX",
+   "spotifyId": "4EpUJbdObAoylk1004aMG3"
+  },
+  {
+   "rank": 24,
+   "id": "yt-24",
+   "title": "Pinball",
+   "artist": "RESCENE",
+   "spotifyId": "7FzDMnwPhj6qdTT2PRaSYi"
+  },
+  {
+   "rank": 25,
+   "id": "yt-25",
+   "title": "삐그덕 (feat. IU)",
+   "artist": "Crush"
+  },
+  {
+   "rank": 26,
+   "id": "yt-26",
+   "title": "Bansanka",
+   "artist": "TAEYEON",
+   "spotifyId": "0KgetoSLg8qfJWIwoAQxBf"
+  },
+  {
+   "rank": 27,
+   "id": "yt-27",
+   "title": "캐치 캐치",
+   "artist": "YENA"
+  },
+  {
+   "rank": 28,
+   "id": "yt-28",
+   "title": "Pop Off Pop Off",
+   "artist": "KiiiKiii",
+   "spotifyId": "0USn5f2VZGbHjHkbjcijzU"
+  },
+  {
+   "rank": 29,
+   "id": "yt-29",
+   "title": "Nostalgia",
+   "artist": "BIG Naughty",
+   "spotifyId": "776vLcNy6mHNmPisdejR0I"
+  },
+  {
+   "rank": 30,
+   "id": "yt-30",
+   "title": "ICONIC HEART",
+   "artist": "Hearts2Hearts",
+   "spotifyId": "1OLAjffdDJibTrUGAwApVk"
+  },
+  {
+   "rank": 31,
+   "id": "yt-31",
+   "title": "Dear my crazy soulmate",
+   "artist": "IU",
+   "spotifyId": "0cbgFMxCXMzs80R2vxwApT"
+  },
+  {
+   "rank": 32,
+   "id": "yt-32",
+   "title": "또또",
+   "artist": "Lim Young Woong"
+  },
+  {
+   "rank": 33,
+   "id": "yt-33",
+   "title": "SUN KISS",
+   "artist": "TUIDE (튜이드)",
+   "spotifyId": "7Jpb9OejYYIwsBIVQwceRy"
+  },
+  {
+   "rank": 34,
+   "id": "yt-34",
+   "title": "Please Be Happy",
+   "artist": "Lim Young Woong",
+   "spotifyId": "05m8pjsNyv5A2IYf5rndNt"
+  },
+  {
+   "rank": 35,
+   "id": "yt-35",
+   "title": "Star Trace",
+   "artist": "PLAVE",
+   "spotifyId": "1fI7jgWKJ41xELohFnVFp7"
+  },
+  {
+   "rank": 36,
+   "id": "yt-36",
+   "title": "I SPY",
+   "artist": "NCT WISH",
+   "spotifyId": "3kcGkOmFXtaFjVdz7ge1WL"
+  },
+  {
+   "rank": 37,
+   "id": "yt-37",
+   "title": "BAD HABITS TONITE",
+   "artist": "A2O MAY"
+  },
+  {
+   "rank": 38,
+   "id": "yt-38",
+   "title": "Skibidi",
+   "artist": "Girls' Generation-HRS",
+   "spotifyId": "2L1dsjU3R3U4SX27qIiPrq"
+  },
+  {
+   "rank": 39,
+   "id": "yt-39",
+   "title": "마음의 숲",
+   "artist": "조선힙합"
+  },
+  {
+   "rank": 40,
+   "id": "yt-40",
+   "title": "404 (New Era)",
+   "artist": "KiiiKiii",
+   "spotifyId": "24rDDbSlFY9OHrlJb48CRh"
+  },
+  {
+   "rank": 41,
+   "id": "yt-41",
+   "title": "잔불 (Still)",
+   "artist": "N.Flying",
+   "spotifyId": "7zBgJna8XcUyg7IIgpPEGq"
+  },
+  {
+   "rank": 42,
+   "id": "yt-42",
+   "title": "별이 시작되는 곳",
+   "artist": "StelLive"
+  },
+  {
+   "rank": 43,
+   "id": "yt-43",
+   "title": "High Forever (Marlon Hoffstadt Remix)",
+   "artist": "Petite Meller"
+  },
+  {
+   "rank": 44,
+   "id": "yt-44",
+   "title": "Baila",
+   "artist": "Lim Young Woong",
+   "spotifyId": "2A4rVwAcshN397FH3DVKNu"
+  },
+  {
+   "rank": 45,
+   "id": "yt-45",
+   "title": "STORM",
+   "artist": "GENER8ION",
+   "spotifyId": "4ipD5CMmWkehabGlAGTOBB"
+  },
+  {
+   "rank": 46,
+   "id": "yt-46",
+   "title": "크게 울어라",
+   "artist": "Roy Kim"
+  },
+  {
+   "rank": 47,
+   "id": "yt-47",
+   "title": "Forever Has Always Been",
+   "artist": "Redoor",
+   "spotifyId": "3tbHqU6PKS2bIGWx9cn082"
+  },
+  {
+   "rank": 48,
+   "id": "yt-48",
+   "title": "BiiiG",
+   "artist": "BIGBANG",
+   "spotifyId": "4pZi0VxU2C8zuxCYfEtFuL"
+  },
+  {
+   "rank": 49,
+   "id": "yt-49",
+   "title": "Made My Night",
+   "artist": "LE SSERAFIM",
+   "spotifyId": "5MOIAV008posdOGmxiJBsi"
+  },
+  {
+   "rank": 50,
+   "id": "yt-50",
+   "title": "Next Chapter",
+   "artist": "Hearts2Hearts",
+   "spotifyId": "4IdtNJqm7zVBwvN5jIUOYo"
   }
  ],
  "ig": [
@@ -151,14 +354,16 @@
    "id": "WI4__7z_dJw",
    "title": "ANIMAL",
    "artist": "BOYNEXTDOOR",
-   "note": "릴스 20위 · 10/1 기준"
+   "note": "릴스 20위 · 10/1 기준",
+   "spotifyId": "3U7iIHygNSOcjcL98KwHQg"
   },
   {
    "rank": 3,
    "id": "Lufa9QAFFeY",
    "title": "new trick",
    "artist": "ROSÉ",
-   "note": "릴스 1위 · 9/22 기준"
+   "note": "릴스 1위 · 9/22 기준",
+   "spotifyId": "5GKBPdWbW4RQtx9VkQ6xKO"
   },
   {
    "rank": 4,
@@ -221,14 +426,16 @@
    "id": "EErSKhC0CZs",
    "title": "You Make My Dreams (Come True)",
    "artist": "Daryl Hall & John Oates",
-   "note": "릴스 21위 · 9/22 기준"
+   "note": "릴스 21위 · 9/22 기준",
+   "spotifyId": "4o6BgsqLIBViaGVbx5rbRk"
   },
   {
    "rank": 13,
    "id": "Po0BbGMSX4g",
    "title": "Upside Down",
    "artist": "Diana Ross",
-   "note": "릴스 22위 · 9/22 기준"
+   "note": "릴스 22위 · 9/22 기준",
+   "spotifyId": "3pbtBomO4Zt5gGiqsYeiBH"
   },
   {
    "rank": 14,
@@ -243,7 +450,8 @@
    "id": "V3b1JrAl_1Q",
    "title": "Guitarist",
    "artist": "도경수 (D.O.)",
-   "note": "릴스 26위 · 9/22 기준"
+   "note": "릴스 26위 · 9/22 기준",
+   "spotifyId": "75MJ2d8AmBWgf2yeZACwpa"
   },
   {
    "rank": 16,
@@ -286,14 +494,16 @@
    "id": "5AgDZcM8In8",
    "title": "Lil Boo Thang",
    "artist": "Paul Russell",
-   "note": "릴스 35위 · 9/22 기준"
+   "note": "릴스 35위 · 9/22 기준",
+   "spotifyId": "0cVyQfDyRnMJ0V3rjjdlU3"
   },
   {
    "rank": 22,
    "id": "jhOVibLEDhA",
    "title": "Koi (恋)",
    "artist": "星野源 (Gen Hoshino)",
-   "note": "릴스 36위 · 9/22 기준"
+   "note": "릴스 36위 · 9/22 기준",
+   "spotifyId": "1flvuaMS27JxpEBL0u2cWc"
   },
   {
    "rank": 23,
