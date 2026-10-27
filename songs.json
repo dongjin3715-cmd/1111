@@ -1,305 +1,141 @@
 {
  "collected": "2026-10-27",
+ "updatedAt": "2026-10-27T19:09:35+09:00",
+ "chartDate": "2026-10-24",
  "yt": [
   {
    "rank": 1,
-   "id": "D968qfUZMUE",
-   "title": "NEON",
-   "artist": "A2O LITE"
+   "id": "yt-1",
+   "title": "Tarantino",
+   "artist": "LISA",
+   "spotifyId": "3bgnrHHwyYRtz3ykzAVImy"
   },
   {
    "rank": 2,
-   "id": "GxChUrrY4bc",
-   "title": "꿈꾸던 어른이 되었나요?",
-   "artist": "머무르 (MEOMURU)"
+   "id": "yt-2",
+   "title": "NEON",
+   "artist": "A2O",
+   "spotifyId": "5PvLNQRNRj61y3CU4SFIY4"
   },
   {
    "rank": 3,
-   "id": "7mDDM0eBWR0",
-   "title": "퇴사할게여 (Narr. 기안84)",
-   "artist": "소연 (SOYEON)"
+   "id": "yt-3",
+   "title": "꿈꾸던 어른이 되었나요?",
+   "artist": "MEOMURU"
   },
   {
    "rank": 4,
-   "id": "pTziJ4RaYnk",
-   "title": "미장센 (Mise en scène)",
-   "artist": "에픽하이 x 다비치"
+   "id": "yt-4",
+   "title": "퇴사할게여",
+   "artist": "SOYEON"
   },
   {
    "rank": 5,
-   "id": "rsNhWkC4neE",
-   "title": "Looks Can Kill",
-   "artist": "IVE"
+   "id": "yt-5",
+   "title": "DESERVE",
+   "artist": "K-NIGHTCORE"
   },
   {
    "rank": 6,
-   "id": "-q_S27LbNKU",
-   "title": "BAD",
-   "artist": "ATEEZ"
+   "id": "yt-6",
+   "title": "체포하겠어",
+   "artist": "ILLIT"
   },
   {
    "rank": 7,
-   "id": "9XttLI0oH0I",
-   "title": "LOVE ATTACK",
-   "artist": "RESCENE"
+   "id": "yt-7",
+   "title": "Looks Can Kill",
+   "artist": "IVE",
+   "spotifyId": "6DCc1MCY8fjkDPR9pMtJaN"
   },
   {
    "rank": 8,
-   "id": "83C3TZ4Zm_o",
-   "title": "LEMONADE",
-   "artist": "aespa"
+   "id": "yt-8",
+   "title": "BAD",
+   "artist": "ATEEZ",
+   "spotifyId": "55UDXtbNJBAdTdUdbRu8T3"
   },
   {
    "rank": 9,
-   "id": "qZlu2j2SiBA",
-   "title": "Pretty Girl",
-   "artist": "RESCENE"
+   "id": "yt-9",
+   "title": "삐그덕 (feat. IU)",
+   "artist": "Crush"
   },
   {
    "rank": 10,
-   "id": "ZbO9PBdFRdc",
-   "title": "Deja Vu",
-   "artist": "RESCENE"
+   "id": "yt-10",
+   "title": "LOVE ATTACK",
+   "artist": "RESCENE",
+   "spotifyId": "6uosenLUNFZtOIih5T0qfV"
   },
   {
    "rank": 11,
-   "id": "U6BDbXIah-Y",
-   "title": "REDRED",
-   "artist": "CORTIS"
+   "id": "yt-11",
+   "title": "Mise en scène",
+   "artist": "Epik High",
+   "spotifyId": "0wIwrT28ZIAHdJsTgKhAt9"
   },
   {
    "rank": 12,
-   "id": "F7sGJVUrkjQ",
-   "title": "RUDE!",
-   "artist": "Hearts2Hearts"
+   "id": "yt-12",
+   "title": "Drip",
+   "artist": "ATEEZ",
+   "spotifyId": "5JaMKAodzzLdFM2ARRTXb9"
   },
   {
    "rank": 13,
-   "id": "bMhDJ0S0OBA",
-   "title": "It's Me",
-   "artist": "ILLIT"
+   "id": "yt-13",
+   "title": "Pretty Girl",
+   "artist": "RESCENE",
+   "spotifyId": "26GehcyfHwgzfS0ok9yDYk"
   },
   {
    "rank": 14,
-   "id": "lQ-w9M447w0",
-   "title": "CRASH",
-   "artist": "ALLDAY PROJECT"
+   "id": "yt-14",
+   "title": "REDRED",
+   "artist": "CORTIS",
+   "spotifyId": "2fCwv2ppU5nTRTckomIGsd"
   },
   {
    "rank": 15,
-   "id": "35w8SrlepLc",
-   "title": "생각을 멈추다 보면 (라이브)",
-   "artist": "최유리"
+   "id": "yt-15",
+   "title": "LEMONADE",
+   "artist": "aespa",
+   "spotifyId": "6vjt2smGK75oc9r2OGFfgp"
   },
   {
    "rank": 16,
-   "id": "NPqtL1dtrlA",
-   "title": "연애의 조건",
-   "artist": "BESTie"
+   "id": "yt-16",
+   "title": "Deja Vu",
+   "artist": "RESCENE",
+   "spotifyId": "1pBUzZE9PoKLoPxo6QxsG6"
   },
   {
    "rank": 17,
-   "id": "IAURqrShEUQ",
-   "title": "SUPERSTAR",
-   "artist": "A2O SOUL"
+   "id": "yt-17",
+   "title": "RUDE!",
+   "artist": "Hearts2Hearts",
+   "spotifyId": "0WA27lZzPKFJKAbiDRmQDc"
   },
   {
    "rank": 18,
-   "id": "6ruo4VVRjvo",
-   "title": "체포하겠어 (You're Under Arrest) (라이브)",
-   "artist": "ILLIT"
+   "id": "yt-18",
+   "title": "생각을 멈추다 보면",
+   "artist": "Choi Yu Ree"
   },
   {
    "rank": 19,
-   "id": "Jxgbfc89hNI",
-   "title": "갑자기",
-   "artist": "I.O.I"
+   "id": "yt-19",
+   "title": "It's Me",
+   "artist": "ILLIT",
+   "spotifyId": "1D5L58KLBbceOynTP4DQnY"
   },
   {
    "rank": 20,
-   "id": "8aKR2Ho--5k",
-   "title": "GO HARD",
-   "artist": "MEOVV"
-  },
-  {
-   "rank": 21,
-   "id": "6Ycn9qZK09I",
-   "title": "Heavy Serenade",
-   "artist": "NMIXX"
-  },
-  {
-   "rank": 22,
-   "id": "NwLxMQtlKDY",
-   "title": "모이세 (Moise)",
-   "artist": "임영웅"
-  },
-  {
-   "rank": 23,
-   "id": "roHWN9fL2SM",
-   "title": "긴 소원 (Birthday Wish)",
-   "artist": "NMIXX"
-  },
-  {
-   "rank": 24,
-   "id": "B8JJ8RNM-60",
-   "title": "Pinball",
-   "artist": "RESCENE"
-  },
-  {
-   "rank": 25,
-   "id": "bSs1gepe_cY",
-   "title": "삐그덕 (Feat. 아이유)",
-   "artist": "크러쉬"
-  },
-  {
-   "rank": 26,
-   "id": "VVO05mYGFY8",
-   "title": "만찬가 (Bansanka)",
-   "artist": "태연 (TAEYEON)"
-  },
-  {
-   "rank": 27,
-   "id": "ItSKahBISg0",
-   "title": "캐치 캐치",
-   "artist": "최예나 (YENA)"
-  },
-  {
-   "rank": 28,
-   "id": "UsbRoaH6y-Q",
-   "title": "Pop Off Pop Off",
-   "artist": "KiiiKiii"
-  },
-  {
-   "rank": 29,
-   "id": "EIc13cn7tWo",
-   "title": "Nostalgia",
-   "artist": "BIG Naughty"
-  },
-  {
-   "rank": 30,
-   "id": "chl0R8C4NJ8",
-   "title": "ICONIC HEART",
-   "artist": "Hearts2Hearts"
-  },
-  {
-   "rank": 31,
-   "id": "RdUV9Ms5GM4",
-   "title": "Dear my crazy soulmate",
-   "artist": "아이유 (IU)"
-  },
-  {
-   "rank": 32,
-   "id": "d6rrtRhN9YM",
-   "title": "또또",
-   "artist": "임영웅"
-  },
-  {
-   "rank": 33,
-   "id": "46h0LvDHgIs",
-   "title": "SUN KISS",
-   "artist": "TUIDE (튜이드)"
-  },
-  {
-   "rank": 34,
-   "id": "jHQF6OeLlB4",
-   "title": "부디 행복해질 것",
-   "artist": "임영웅"
-  },
-  {
-   "rank": 35,
-   "id": "TBmE7m0yEwY",
-   "title": "Star Trace",
-   "artist": "PLAVE"
-  },
-  {
-   "rank": 36,
-   "id": "xIlFjHHUfI0",
-   "title": "I SPY",
-   "artist": "NCT WISH"
-  },
-  {
-   "rank": 37,
-   "id": "tYzAC-pYkyM",
-   "title": "BAD HABITS TONITE",
-   "artist": "A2O MAY"
-  },
-  {
-   "rank": 38,
-   "id": "oAwzFFEYm38",
-   "title": "Skibidi",
-   "artist": "소녀시대-효리수"
-  },
-  {
-   "rank": 39,
-   "id": "XPUOHpkRAxg",
-   "title": "마음의 숲",
-   "artist": "조선힙합"
-  },
-  {
-   "rank": 40,
-   "id": "zhHB4dZTChw",
-   "title": "404 (New Era)",
-   "artist": "KiiiKiii"
-  },
-  {
-   "rank": 41,
-   "id": "gYAduKnFHG4",
-   "title": "잔불 (Still)",
-   "artist": "엔플라잉 (N.Flying)"
-  },
-  {
-   "rank": 42,
-   "id": "EKEts5IShas",
-   "title": "별이 시작되는 곳",
-   "artist": "ABYSS (스텔라이브)"
-  },
-  {
-   "rank": 43,
-   "id": "T6hOlik58gg",
-   "title": "High Forever (Marlon Hoffstadt Remix)",
-   "artist": "Petite Meller"
-  },
-  {
-   "rank": 44,
-   "id": "R53dDlmY3wo",
-   "title": "Baila",
-   "artist": "임영웅"
-  },
-  {
-   "rank": 45,
-   "id": "x6_mbnsh6VU",
-   "title": "STORM",
-   "artist": "GENER8ION"
-  },
-  {
-   "rank": 46,
-   "id": "8la3SuNxpPQ",
-   "title": "크게 울어라",
-   "artist": "로이킴"
-  },
-  {
-   "rank": 47,
-   "id": "E5BLkMGxDgQ",
-   "title": "Forever Has Always Been",
-   "artist": "Redoor (리도어)"
-  },
-  {
-   "rank": 48,
-   "id": "L8ZnXgbyUuc",
-   "title": "BiiiG",
-   "artist": "BIGBANG"
-  },
-  {
-   "rank": 49,
-   "id": "Y1Lah0BM0KQ",
-   "title": "Made My Night",
-   "artist": "LE SSERAFIM"
-  },
-  {
-   "rank": 50,
-   "id": "lu9GinsuyUQ",
-   "title": "Next Chapter",
-   "artist": "Hearts2Hearts"
+   "id": "yt-20",
+   "title": "Drowning",
+   "artist": "WOODZ",
+   "spotifyId": "4xeugB5MqWh0jwvXZPxahq"
   }
  ],
  "ig": [
@@ -399,7 +235,8 @@
    "id": "nP1xjFX86Po",
    "title": "이 별로부터 (Unknown Planet)",
    "artist": "아이유 (IU)",
-   "note": "릴스 25위 · 9/22 기준"
+   "note": "릴스 25위 · 9/22 기준",
+   "spotifyId": "02KRPJcx4TJFLCXt9qwEUE"
   },
   {
    "rank": 15,
@@ -413,7 +250,8 @@
    "id": "3sB4Iv_tM7U",
    "title": "Nicole Kidman",
    "artist": "ADÉLA",
-   "note": "릴스 29위 · 9/22 기준"
+   "note": "릴스 29위 · 9/22 기준",
+   "spotifyId": "70cHKK8bHAfJrOGVnfRG9J"
   },
   {
    "rank": 17,
@@ -462,14 +300,16 @@
    "id": "9XttLI0oH0I",
    "title": "LOVE ATTACK",
    "artist": "RESCENE",
-   "note": "릴스 40위 · 9/22 기준"
+   "note": "릴스 40위 · 9/22 기준",
+   "spotifyId": "6uosenLUNFZtOIih5T0qfV"
   },
   {
    "rank": 24,
    "id": "TiOpGgCXeT0",
    "title": "너",
    "artist": "ycs (SYSTEM SEOUL)",
-   "note": "릴스 42위 · 9/22 기준"
+   "note": "릴스 42위 · 9/22 기준",
+   "spotifyId": "3b4YlIUpzYs3CZ6s9GVmzT"
   },
   {
    "rank": 25,
@@ -490,7 +330,8 @@
    "id": "B8JJ8RNM-60",
    "title": "Pinball",
    "artist": "RESCENE",
-   "note": "릴스 46위 · 9/22 기준"
+   "note": "릴스 46위 · 9/22 기준",
+   "spotifyId": "7FzDMnwPhj6qdTT2PRaSYi"
   }
  ]
 }

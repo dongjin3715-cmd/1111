@@ -19,8 +19,13 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
 body{padding-bottom:calc(24px + var(--safe-b))}
 header.top{position:sticky;top:0;z-index:10;background:var(--bg);padding:calc(10px + var(--safe-t)) 12px 8px;border-bottom:1px solid var(--line)}
 h1{font-size:18px;margin:0 0 8px}
-#player-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}
-#player-wrap iframe,#player{position:absolute;inset:0;width:100%;height:100%;border:0}
+#player-wrap{position:relative;width:100%;min-height:80px;background:#000;border-radius:12px;overflow:hidden}
+#player-wrap iframe{width:100%;height:152px;border:0;display:block}
+#playerHint{margin:0;padding:16px 12px;color:var(--sub);font-size:13px;text-align:center;line-height:1.5}
+#playerHint[hidden]{display:none}
+#openSpotify{display:block;margin-top:8px;text-align:center;text-decoration:none;padding:12px 8px;border-radius:10px;background:#1db954;color:#04140a;font-weight:700;font-size:15px}
+.chart-label{margin:0;padding:2px 12px 0;font-size:12px;color:var(--sub)}
+.chart-label[hidden]{display:none}
 #now{margin:8px 0 6px;min-height:40px}
 #now .t{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #now .a{font-size:13px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -53,8 +58,12 @@ footer a{color:#93c5fd}
 <body>
 <header class="top">
   <h1>🎵 동진 뮤직</h1>
-  <div id="player-wrap"><div id="player"></div></div>
-  <div id="now"><div class="t" id="nowT">곡을 눌러 들어 보세요</div><div class="a" id="nowA">YouTube 공식 플레이어로 재생돼요</div></div>
+  <div id="player-wrap">
+    <div id="embed"></div>
+    <p id="playerHint">곡을 누르면 Spotify에서 재생돼요</p>
+  </div>
+  <a id="openSpotify" href="https://open.spotify.com/" target="_blank" rel="noopener">스포티파이 앱에서 열기</a>
+  <div id="now"><div class="t" id="nowT">곡을 눌러 들어 보세요</div><div class="a" id="nowA">Spotify로 재생돼요</div></div>
   <div class="ctrl">
     <button id="prev">◀ 이전곡</button>
     <button id="toggle" class="main">▶ 재생</button>
@@ -64,22 +73,23 @@ footer a{color:#93c5fd}
 </header>
 
 <nav class="tabs" role="tablist">
-  <button role="tab" id="tab-yt" aria-selected="true">유튜브 인기곡</button>
+  <button role="tab" id="tab-yt" aria-selected="true">유튜브 일간 순위</button>
   <button role="tab" id="tab-ig" aria-selected="false">인스타 릴스 인기곡</button>
 </nav>
+<p id="chartLabel" class="chart-label">유튜브 일간 순위</p>
 <div class="search"><input id="q" type="search" placeholder="곡 또는 가수 검색 (예: IVE, 퇴사)" autocomplete="off"></div>
 <ul id="list"></ul>
 
 <footer>
   <div>자료 모은 날: <b id="date"></b></div>
-  <div>유튜브 목록: 한국 주간 인기곡 Top 50 (2026.10.16~22 집계, <a href="https://kworb.net/youtube/insights/kr.html" target="_blank" rel="noopener">kworb.net</a>이 정리한 YouTube 차트). 인스타 목록: 한국 릴스 '인기 상승 오디오' 순위(<a href="https://sports.donga.com/ent/article/all/20261025/134902002/1" target="_blank" rel="noopener">스포츠동아 10/25</a>, <a href="https://www.slist.kr/news/articleView.html?idxno=770194" target="_blank" rel="noopener">싱글리스트 10/1</a>, <a href="https://issueitnow.com/kr/instagram/" target="_blank" rel="noopener">issueitnow 9/22 앱 확인</a>). 곡마다 기준일이 달라요.</div>
+  <div>유튜브 목록: 한국 일간 인기곡 (<a href="https://kworb.net/youtube/insights/kr_daily.html" target="_blank" rel="noopener">kworb.net</a> YouTube 일간 차트). 인스타 목록: 한국 릴스 '인기 상승 오디오' 순위(<a href="https://sports.donga.com/ent/article/all/20261025/134902002/1" target="_blank" rel="noopener">스포츠동아 10/25</a>, <a href="https://www.slist.kr/news/articleView.html?idxno=770194" target="_blank" rel="noopener">싱글리스트 10/1</a>, <a href="https://issueitnow.com/kr/instagram/" target="_blank" rel="noopener">issueitnow 9/22 앱 확인</a>). 곡마다 기준일이 달라요.</div>
   <div>📱 아이폰은 첫 재생을 한 번 직접 눌러야 하고, 화면이 꺼지면 다음 곡 자동 재생이 멈출 수 있어요.</div>
-  <div>모든 곡은 YouTube 공식 임베드 플레이어로만 재생돼요. 내려받거나 음원을 추출하지 않아요.</div>
+  <div>재생은 Spotify 임베드 플레이어로 해요. 휴대폰 브라우저는 미리듣기만 될 수 있어서, 이어서 들으려면 ‘스포티파이 앱에서 열기’를 누르세요. 음원을 내려받지 않아요.</div>
 </footer>
 
 <script>
 var DATA = {"collected": "2026-10-27", "yt": [{"rank": 1, "id": "D968qfUZMUE", "title": "NEON", "artist": "A2O LITE"}, {"rank": 2, "id": "GxChUrrY4bc", "title": "꿈꾸던 어른이 되었나요?", "artist": "머무르 (MEOMURU)"}, {"rank": 3, "id": "7mDDM0eBWR0", "title": "퇴사할게여 (Narr. 기안84)", "artist": "소연 (SOYEON)"}, {"rank": 4, "id": "pTziJ4RaYnk", "title": "미장센 (Mise en scène)", "artist": "에픽하이 x 다비치"}, {"rank": 5, "id": "rsNhWkC4neE", "title": "Looks Can Kill", "artist": "IVE"}, {"rank": 6, "id": "-q_S27LbNKU", "title": "BAD", "artist": "ATEEZ"}, {"rank": 7, "id": "9XttLI0oH0I", "title": "LOVE ATTACK", "artist": "RESCENE"}, {"rank": 8, "id": "83C3TZ4Zm_o", "title": "LEMONADE", "artist": "aespa"}, {"rank": 9, "id": "qZlu2j2SiBA", "title": "Pretty Girl", "artist": "RESCENE"}, {"rank": 10, "id": "ZbO9PBdFRdc", "title": "Deja Vu", "artist": "RESCENE"}, {"rank": 11, "id": "U6BDbXIah-Y", "title": "REDRED", "artist": "CORTIS"}, {"rank": 12, "id": "F7sGJVUrkjQ", "title": "RUDE!", "artist": "Hearts2Hearts"}, {"rank": 13, "id": "bMhDJ0S0OBA", "title": "It's Me", "artist": "ILLIT"}, {"rank": 14, "id": "lQ-w9M447w0", "title": "CRASH", "artist": "ALLDAY PROJECT"}, {"rank": 15, "id": "35w8SrlepLc", "title": "생각을 멈추다 보면 (라이브)", "artist": "최유리"}, {"rank": 16, "id": "NPqtL1dtrlA", "title": "연애의 조건", "artist": "BESTie"}, {"rank": 17, "id": "IAURqrShEUQ", "title": "SUPERSTAR", "artist": "A2O SOUL"}, {"rank": 18, "id": "6ruo4VVRjvo", "title": "체포하겠어 (You're Under Arrest) (라이브)", "artist": "ILLIT"}, {"rank": 19, "id": "Jxgbfc89hNI", "title": "갑자기", "artist": "I.O.I"}, {"rank": 20, "id": "8aKR2Ho--5k", "title": "GO HARD", "artist": "MEOVV"}, {"rank": 21, "id": "6Ycn9qZK09I", "title": "Heavy Serenade", "artist": "NMIXX"}, {"rank": 22, "id": "NwLxMQtlKDY", "title": "모이세 (Moise)", "artist": "임영웅"}, {"rank": 23, "id": "roHWN9fL2SM", "title": "긴 소원 (Birthday Wish)", "artist": "NMIXX"}, {"rank": 24, "id": "B8JJ8RNM-60", "title": "Pinball", "artist": "RESCENE"}, {"rank": 25, "id": "bSs1gepe_cY", "title": "삐그덕 (Feat. 아이유)", "artist": "크러쉬"}, {"rank": 26, "id": "VVO05mYGFY8", "title": "만찬가 (Bansanka)", "artist": "태연 (TAEYEON)"}, {"rank": 27, "id": "ItSKahBISg0", "title": "캐치 캐치", "artist": "최예나 (YENA)"}, {"rank": 28, "id": "UsbRoaH6y-Q", "title": "Pop Off Pop Off", "artist": "KiiiKiii"}, {"rank": 29, "id": "EIc13cn7tWo", "title": "Nostalgia", "artist": "BIG Naughty"}, {"rank": 30, "id": "chl0R8C4NJ8", "title": "ICONIC HEART", "artist": "Hearts2Hearts"}, {"rank": 31, "id": "RdUV9Ms5GM4", "title": "Dear my crazy soulmate", "artist": "아이유 (IU)"}, {"rank": 32, "id": "d6rrtRhN9YM", "title": "또또", "artist": "임영웅"}, {"rank": 33, "id": "46h0LvDHgIs", "title": "SUN KISS", "artist": "TUIDE (튜이드)"}, {"rank": 34, "id": "jHQF6OeLlB4", "title": "부디 행복해질 것", "artist": "임영웅"}, {"rank": 35, "id": "TBmE7m0yEwY", "title": "Star Trace", "artist": "PLAVE"}, {"rank": 36, "id": "xIlFjHHUfI0", "title": "I SPY", "artist": "NCT WISH"}, {"rank": 37, "id": "tYzAC-pYkyM", "title": "BAD HABITS TONITE", "artist": "A2O MAY"}, {"rank": 38, "id": "oAwzFFEYm38", "title": "Skibidi", "artist": "소녀시대-효리수"}, {"rank": 39, "id": "XPUOHpkRAxg", "title": "마음의 숲", "artist": "조선힙합"}, {"rank": 40, "id": "zhHB4dZTChw", "title": "404 (New Era)", "artist": "KiiiKiii"}, {"rank": 41, "id": "gYAduKnFHG4", "title": "잔불 (Still)", "artist": "엔플라잉 (N.Flying)"}, {"rank": 42, "id": "EKEts5IShas", "title": "별이 시작되는 곳", "artist": "ABYSS (스텔라이브)"}, {"rank": 43, "id": "T6hOlik58gg", "title": "High Forever (Marlon Hoffstadt Remix)", "artist": "Petite Meller"}, {"rank": 44, "id": "R53dDlmY3wo", "title": "Baila", "artist": "임영웅"}, {"rank": 45, "id": "x6_mbnsh6VU", "title": "STORM", "artist": "GENER8ION"}, {"rank": 46, "id": "8la3SuNxpPQ", "title": "크게 울어라", "artist": "로이킴"}, {"rank": 47, "id": "E5BLkMGxDgQ", "title": "Forever Has Always Been", "artist": "Redoor (리도어)"}, {"rank": 48, "id": "L8ZnXgbyUuc", "title": "BiiiG", "artist": "BIGBANG"}, {"rank": 49, "id": "Y1Lah0BM0KQ", "title": "Made My Night", "artist": "LE SSERAFIM"}, {"rank": 50, "id": "lu9GinsuyUQ", "title": "Next Chapter", "artist": "Hearts2Hearts"}], "ig": [{"rank": 1, "id": "bSs1gepe_cY", "title": "삐그덕 (Feat. 아이유)", "artist": "크러쉬", "note": "릴스 8위 · 10/25 기준"}, {"rank": 2, "id": "WI4__7z_dJw", "title": "ANIMAL", "artist": "BOYNEXTDOOR", "note": "릴스 20위 · 10/1 기준"}, {"rank": 3, "id": "Lufa9QAFFeY", "title": "new trick", "artist": "ROSÉ", "note": "릴스 1위 · 9/22 기준"}, {"rank": 4, "id": "cdW2AOtSM8A", "title": "right here", "artist": "i don't like mirrors", "note": "릴스 3위 · 9/22 기준"}, {"rank": 5, "id": "AqFJZluGEJM", "title": "It's so Nice to Be Happy", "artist": "Futemys", "note": "릴스 4위 · 9/22 기준"}, {"rank": 6, "id": "MZ5zQd6imuw", "title": "빙글빙글", "artist": "나미", "note": "릴스 6위 · 9/22 기준"}, {"rank": 7, "id": "WGTrgrmalxE", "title": "꺾어 (GOGO)", "artist": "영탁", "note": "릴스 7위 · 9/22 기준"}, {"rank": 8, "id": "iNMvUYjaieA", "title": "Death of Me", "artist": "EVAN (에반)", "note": "릴스 20위 · 9/22 기준"}, {"rank": 9, "id": "Aq_gsctWHtQ", "title": "EVERYTHING", "artist": "검정치마", "note": "릴스 15위 · 9/22 기준"}, {"rank": 10, "id": "bh8g3-R_Wy4", "title": "매일 행복한 일만 가득할 당신에게", "artist": "E:um", "note": "릴스 23위 · 9/22 기준"}, {"rank": 11, "id": "SBUG91NLG5Q", "title": "Yummy Little Day", "artist": "emilogue", "note": "릴스 14위 · 9/22 기준"}, {"rank": 12, "id": "EErSKhC0CZs", "title": "You Make My Dreams (Come True)", "artist": "Daryl Hall & John Oates", "note": "릴스 21위 · 9/22 기준"}, {"rank": 13, "id": "Po0BbGMSX4g", "title": "Upside Down", "artist": "Diana Ross", "note": "릴스 22위 · 9/22 기준"}, {"rank": 14, "id": "nP1xjFX86Po", "title": "이 별로부터 (Unknown Planet)", "artist": "아이유 (IU)", "note": "릴스 25위 · 9/22 기준"}, {"rank": 15, "id": "V3b1JrAl_1Q", "title": "Guitarist", "artist": "도경수 (D.O.)", "note": "릴스 26위 · 9/22 기준"}, {"rank": 16, "id": "3sB4Iv_tM7U", "title": "Nicole Kidman", "artist": "ADÉLA", "note": "릴스 29위 · 9/22 기준"}, {"rank": 17, "id": "w9_-SCFNeag", "title": "L.O.V.E.", "artist": "Michael Bublé", "note": "릴스 30위 · 9/22 기준"}, {"rank": 18, "id": "b7RTL7tJKWo", "title": "냉탕에 상어 (Feat. 블랙넛)", "artist": "슈퍼비 (Superbee)", "note": "릴스 31위 · 9/22 기준"}, {"rank": 19, "id": "UWPGeexwmto", "title": "너가 최고야", "artist": "YS Block", "note": "릴스 32위 · 9/22 기준"}, {"rank": 20, "id": "1cKc1rkZwf8", "title": "예술이야 (IT'S ART)", "artist": "싸이 (PSY)", "note": "릴스 34위 · 9/22 기준"}, {"rank": 21, "id": "5AgDZcM8In8", "title": "Lil Boo Thang", "artist": "Paul Russell", "note": "릴스 35위 · 9/22 기준"}, {"rank": 22, "id": "jhOVibLEDhA", "title": "Koi (恋)", "artist": "星野源 (Gen Hoshino)", "note": "릴스 36위 · 9/22 기준"}, {"rank": 23, "id": "9XttLI0oH0I", "title": "LOVE ATTACK", "artist": "RESCENE", "note": "릴스 40위 · 9/22 기준"}, {"rank": 24, "id": "TiOpGgCXeT0", "title": "너", "artist": "ycs (SYSTEM SEOUL)", "note": "릴스 42위 · 9/22 기준"}, {"rank": 25, "id": "Q53TqpuiCqU", "title": "ENOuGH (feat. Bazzi)", "artist": "홍중 (ATEEZ)", "note": "릴스 44위 · 9/22 기준"}, {"rank": 26, "id": "wmluyZkfFVU", "title": "사계, 그리고 너", "artist": "이창섭", "note": "릴스 45위 · 9/22 기준"}, {"rank": 27, "id": "B8JJ8RNM-60", "title": "Pinball", "artist": "RESCENE", "note": "릴스 46위 · 9/22 기준"}]};
-var tab = 'yt', queue = [], curId = null, ready = false, pending = null, player = null, timer = null;
+var tab = 'yt', queue = [], curId = null, iframeApi = null, embed = null, embedBusy = false;
 var $ = function(id){return document.getElementById(id);};
 $('date').textContent = DATA.collected.replace(/-/g,'.');
 
@@ -98,16 +108,80 @@ function render(){
 }
 
 function setMsg(m){$('msg').textContent=m||'';}
+function spotifyHref(s){
+  if(!s) return 'https://open.spotify.com/';
+  if(s.spotifyId) return 'https://open.spotify.com/track/'+s.spotifyId;
+  var q=((s.artist?s.artist+' ':'')+(s.title||'')).trim();
+  return 'https://open.spotify.com/search/'+encodeURIComponent(q);
+}
+function setOpen(s){$('openSpotify').href=spotifyHref(s);}
+function chartDay(){return String(DATA.chartDate||DATA.updatedAt||DATA.collected||'').slice(0,10);}
+function updateChartLabel(){
+  var el=$('chartLabel'); if(!el) return;
+  var show=tab==='yt';
+  el.hidden=!show;
+  if(!show) return;
+  var day=chartDay();
+  el.textContent=day?('유튜브 일간 순위 · '+day+' 기준'):'유튜브 일간 순위';
+}
+function hideEmbed(){
+  var frame=document.querySelector('#player-wrap iframe');
+  if(frame) frame.hidden=true;
+  $('playerHint').hidden=false;
+}
+function showEmbed(){
+  var frame=document.querySelector('#player-wrap iframe');
+  if(frame) frame.hidden=false;
+  $('playerHint').hidden=true;
+}
+function bindEmbed(controller){
+  embed=controller;
+  controller.addListener('playback_update',function(e){
+    var paused=!e.data||e.data.isPaused!==false;
+    $('toggle').textContent=paused?'▶ 재생':'⏸ 일시정지';
+  });
+}
+function loadSpotify(s){
+  setOpen(s);
+  if(!s||!s.spotifyId){
+    if(embed){try{embed.pause();}catch(err){}}
+    hideEmbed();
+    $('playerHint').textContent='이 곡은 Spotify 차트에서 찾지 못했어요. 아래 버튼으로 검색해 보세요.';
+    $('toggle').textContent='▶ 재생';
+    return;
+  }
+  var uri='spotify:track:'+s.spotifyId;
+  if(!iframeApi){
+    $('playerHint').hidden=false;
+    $('playerHint').textContent='Spotify 플레이어를 준비하고 있어요.';
+    return;
+  }
+  if(!embed){
+    if(embedBusy) return;
+    embedBusy=true;
+    var width=Math.max(280,$('player-wrap').clientWidth||320);
+    iframeApi.createController($('embed'),{uri:uri,width:width,height:152},function(controller){
+      embedBusy=false;
+      bindEmbed(controller);
+      controller.addListener('ready',function(){try{controller.play();}catch(err){}});
+      showEmbed();
+    });
+    return;
+  }
+  showEmbed();
+  embed.loadUri(uri);
+  try{embed.play();}catch(err){}
+}
 function updateNow(s){
   $('nowT').textContent=s.title;$('nowA').textContent=s.artist;document.title=s.title+' · 동진 뮤직';
-  if('mediaSession' in navigator){try{navigator.mediaSession.metadata=new MediaMetadata({title:s.title,artist:s.artist,album:'동진 뮤직',artwork:[{src:'https://i.ytimg.com/vi/'+s.id+'/hqdefault.jpg',sizes:'480x360',type:'image/jpeg'}]});}catch(e){}}
+  if('mediaSession' in navigator){try{navigator.mediaSession.metadata=new MediaMetadata({title:s.title,artist:s.artist,album:'동진 뮤직'});}catch(e){}}
 }
 function play(id,fromList){
   var s=find(id);if(!s)return;
   curId=id;
   if(fromList){queue=filtered().map(function(x){return x.id;});}
   updateNow(s);render();setMsg('');
-  if(ready&&player){player.loadVideoById(id);}else{pending=id;}
+  loadSpotify(s);
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function step(d){
@@ -120,14 +194,15 @@ function step(d){
 $('next').onclick=function(){step(1);};
 $('prev').onclick=function(){step(-1);};
 $('toggle').onclick=function(){
-  if(!ready||!player)return;
   if(!curId){var f=filtered();if(f.length)play(f[0].id,true);return;}
-  var st=player.getPlayerState();
-  if(st===1)player.pauseVideo();else player.playVideo();
+  var s=find(curId);
+  if(!s||!s.spotifyId){setMsg('Spotify에서 이 곡을 찾지 못했어요. 아래 버튼으로 검색해 보세요.');return;}
+  if(!embed){loadSpotify(s);return;}
+  try{embed.togglePlay();}catch(err){}
 };
 $('list').onclick=function(e){var li=e.target.closest('li[data-id]');if(li)play(li.getAttribute('data-id'),true);};
 $('q').oninput=render;
-function setTab(t){tab=t;$('tab-yt').setAttribute('aria-selected',t==='yt');$('tab-ig').setAttribute('aria-selected',t==='ig');$('q').value='';render();}
+function setTab(t){tab=t;$('tab-yt').setAttribute('aria-selected',t==='yt');$('tab-ig').setAttribute('aria-selected',t==='ig');$('q').value='';updateChartLabel();render();}
 $('tab-yt').onclick=function(){setTab('yt');};
 $('tab-ig').onclick=function(){setTab('ig');};
 
@@ -135,35 +210,36 @@ if('mediaSession' in navigator){
   try{
     navigator.mediaSession.setActionHandler('nexttrack',function(){step(1);});
     navigator.mediaSession.setActionHandler('previoustrack',function(){step(-1);});
-    navigator.mediaSession.setActionHandler('play',function(){if(player)player.playVideo();});
-    navigator.mediaSession.setActionHandler('pause',function(){if(player)player.pauseVideo();});
+    navigator.mediaSession.setActionHandler('play',function(){if(embed)embed.play();});
+    navigator.mediaSession.setActionHandler('pause',function(){if(embed)embed.pause();});
   }catch(e){}
 }
 
-/* YouTube IFrame Player API (official embed) */
-window.onYouTubeIframeAPIReady=function(){
-  player=new YT.Player('player',{
-    width:'100%',height:'100%',
-    playerVars:{playsinline:1,rel:0,modestbranding:1,origin:location.origin&&location.origin!=='null'?location.origin:undefined},
-    events:{
-      onReady:function(){ready=true;if(pending){player.loadVideoById(pending);pending=null;}},
-      onStateChange:function(e){
-        if(e.data===YT.PlayerState.ENDED){step(1);}
-        $('toggle').textContent=(e.data===YT.PlayerState.PLAYING)?'⏸ 일시정지':'▶ 재생';
-      },
-      onError:function(e){
-        var s=find(curId);
-        setMsg('이 영상은 앱 안에서 재생할 수 없어요'+(s?' ('+s.title+')':'')+'. 다음 곡으로 넘어가요.');
-        clearTimeout(timer);timer=setTimeout(function(){step(1);},1500);
-      }
-    }
-  });
+function applyRemote(data){
+  if(!data||!Array.isArray(data.yt)||data.yt.length<1) return;
+  DATA.yt=data.yt;
+  if(Array.isArray(data.ig)&&data.ig.length) DATA.ig=data.ig;
+  if(data.chartDate) DATA.chartDate=data.chartDate;
+  if(data.updatedAt) DATA.updatedAt=data.updatedAt;
+  if(data.collected) DATA.collected=data.collected;
+  var gathered=String(data.updatedAt||data.collected||'').slice(0,10);
+  if(gathered) $('date').textContent=gathered.replace(/-/g,'.');
+  updateChartLabel();
+  render();
+}
+window.onSpotifyIframeApiReady=function(api){
+  iframeApi=api;
+  if(!curId) return;
+  var s=find(curId);
+  if(s&&s.spotifyId) loadSpotify(s);
 };
-var tag=document.createElement('script');tag.src='https://www.youtube.com/iframe_api';
-tag.onerror=function(){setMsg('YouTube 플레이어를 불러오지 못했어요. 인터넷 연결을 확인해 주세요.');};
+var tag=document.createElement('script');tag.src='https://open.spotify.com/embed/iframe-api/v1';tag.async=true;
+tag.onerror=function(){setMsg('Spotify 플레이어를 불러오지 못했어요. 아래 버튼으로 앱에서 열어 주세요.');};
 document.head.appendChild(tag);
 
+updateChartLabel();
 render();
+fetch('./songs.json',{cache:'no-store'}).then(function(r){if(!r.ok) throw new Error('songs');return r.json();}).then(applyRemote).catch(function(){});
 if('serviceWorker' in navigator&&location.protocol.indexOf('http')===0){navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(function(){});}
 </script>
 </body>

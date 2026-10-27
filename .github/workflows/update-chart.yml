@@ -1,0 +1,56 @@
+name: Update daily chart
+
+on:
+  schedule:
+    # 09:00 KST
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# A push made with GITHUB_TOKEN does not start the pages workflow, so this
+# workflow deploys the updated site itself.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Update chart
+        run: python3 scripts/update_chart.py
+
+      - name: Commit chart files if they changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add songs.json spotify-cache.json
+          if git diff --cached --quiet; then
+            echo "songs.json unchanged"
+          else
+            git commit -m "Update YouTube daily chart and Spotify links"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+          include-hidden-files: true
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
