@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-27T19:39:13+09:00",
+ "updatedAt": "2026-11-02T09:55:06+09:00",
  "entries": {
   "tarantino|lisa": {
    "spotifyId": "3bgnrHHwyYRtz3ykzAVImy",
@@ -294,6 +294,54 @@
    "title": "Koi (恋)",
    "artist": "星野源 (Gen Hoshino)",
    "source": "artist"
+  },
+  "firestarter|k da": {
+   "spotifyId": "6UeSC8jEhf9XmUL8EX2rni",
+   "title": "FIRESTARTER (feat. Sophie Powers, MIYEON & SOYEON)",
+   "artist": "K/DA",
+   "source": "kr_weekly"
+  },
+  "sawadika|lisa": {
+   "spotifyId": "1VWiDyYTrqQhhmnWANWkFa",
+   "title": "SaWaDiKa",
+   "artist": "LISA",
+   "source": "global_weekly"
+  },
+  "deserve|babymonster": {
+   "spotifyId": "3lNWn4ZOgHSZUWcWbIl6KQ",
+   "title": "DESERVE",
+   "artist": "BABYMONSTER",
+   "source": "kr_weekly"
+  },
+  "insomnia|riize": {
+   "spotifyId": "0jZY6beWiqEvcPCGuLaEaW",
+   "title": "Insomnia",
+   "artist": "RIIZE",
+   "source": "kr_weekly"
+  },
+  "rose|yanghongwon": {
+   "spotifyId": "1CB7xt4rCsyh0RY2eKA2oH",
+   "title": "ROSE (feat. Skinny Brown & Homeboy)",
+   "artist": "YANGHONGWON",
+   "source": "kr_weekly"
+  },
+  "if you ask me what love is|roy kim": {
+   "spotifyId": "5zsMOF3yWT4U1Vw5eaMQFH",
+   "title": "If You Ask Me What Love Is",
+   "artist": "Roy Kim",
+   "source": "kr_weekly"
+  },
+  "its you|han yo han": {
+   "spotifyId": "2vYRiFZ6HuKqO5asZ5YlyS",
+   "title": "It's You",
+   "artist": "Han Yo Han",
+   "source": "kr_weekly"
+  },
+  "bang bang|ive": {
+   "spotifyId": "7pBE8YpFoZ9ankC2Ci5z9X",
+   "title": "BANG BANG",
+   "artist": "IVE",
+   "source": "kr_weekly_totals"
   }
  }
 }
