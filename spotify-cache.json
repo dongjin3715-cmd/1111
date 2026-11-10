@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-02T09:55:06+09:00",
+ "updatedAt": "2026-11-10T09:55:02+09:00",
  "entries": {
   "tarantino|lisa": {
    "spotifyId": "3bgnrHHwyYRtz3ykzAVImy",
@@ -342,6 +342,48 @@
    "title": "BANG BANG",
    "artist": "IVE",
    "source": "kr_weekly_totals"
+  },
+  "with|rescene": {
+   "spotifyId": "6GNvsmhrkdPp5skYLq42nY",
+   "title": "With",
+   "artist": "RESCENE",
+   "source": "kr_weekly"
+  },
+  "inside out|rescene": {
+   "spotifyId": "6t45ZC1w8QADl5HpeyJ3Rr",
+   "title": "Inside Out",
+   "artist": "RESCENE",
+   "source": "kr_weekly"
+  },
+  "addicted|jisoo": {
+   "spotifyId": "0SqDNsDiJyvrbXGsIvt0hN",
+   "title": "ADDICTED",
+   "artist": "JISOO",
+   "source": "kr_weekly"
+  },
+  "ado and july|heize": {
+   "spotifyId": "0Yz3F0UGDibDe8uU69zmjn",
+   "title": "【Ado】And July (Feat. DEAN, DJ Friz)",
+   "artist": "Heize",
+   "source": "artist"
+  },
+  "ヒロイン|back number": {
+   "spotifyId": "3hBAYbAECEix9raaTq8S3H",
+   "title": "ヒロイン",
+   "artist": "back number",
+   "source": "kr_daily"
+  },
+  "첫 눈 the first snow|exo": {
+   "spotifyId": "2VNpT9fRk1kyksT0S4coZR",
+   "title": "첫 눈 The First Snow",
+   "artist": "EXO",
+   "source": "kr_weekly_totals"
+  },
+  "runaway|rescene": {
+   "spotifyId": "1x0mG2CyQW5mjBX17ZfTUG",
+   "title": "Runaway",
+   "artist": "RESCENE",
+   "source": "kr_weekly"
   }
  }
 }
