@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-10T09:55:02+09:00",
+ "updatedAt": "2026-11-11T09:55:22+09:00",
  "entries": {
   "tarantino|lisa": {
    "spotifyId": "3bgnrHHwyYRtz3ykzAVImy",
@@ -384,6 +384,12 @@
    "title": "Runaway",
    "artist": "RESCENE",
    "source": "kr_weekly"
+  },
+  "one sided love|jinyoung": {
+   "spotifyId": "4GvlnnM60E0IOpjgAbXFzg",
+   "title": "One-sided love (Live) (feat. Choi Yu Ree)",
+   "artist": "Jinyoung",
+   "source": "kr_daily"
   }
  }
 }
