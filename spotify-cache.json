@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-11T09:55:22+09:00",
+ "updatedAt": "2026-11-14T09:54:06+09:00",
  "entries": {
   "tarantino|lisa": {
    "spotifyId": "3bgnrHHwyYRtz3ykzAVImy",
@@ -390,6 +390,12 @@
    "title": "One-sided love (Live) (feat. Choi Yu Ree)",
    "artist": "Jinyoung",
    "source": "kr_daily"
+  },
+  "체포하겠어|illit": {
+   "spotifyId": "30T1Q5lsYzCEKzifUWwFWM",
+   "title": "체포하겠어",
+   "artist": "ILLIT",
+   "source": "kr_weekly"
   }
  }
 }

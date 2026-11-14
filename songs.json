@@ -1,6 +1,6 @@
 {
- "collected": "2026-11-11",
- "updatedAt": "2026-11-11T09:55:22+09:00",
+ "collected": "2026-11-14",
+ "updatedAt": "2026-11-14T09:54:06+09:00",
  "chartDate": "2026-11-05",
  "chartWeek": "2026-11-05",
  "yt": [
@@ -21,7 +21,8 @@
    "rank": 3,
    "id": "yt-3",
    "title": "체포하겠어",
-   "artist": "ILLIT"
+   "artist": "ILLIT",
+   "spotifyId": "30T1Q5lsYzCEKzifUWwFWM"
   },
   {
    "rank": 4,
