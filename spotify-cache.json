@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-15T09:56:43+09:00",
+ "updatedAt": "2026-11-16T10:14:56+09:00",
  "entries": {
   "tarantino|lisa": {
    "spotifyId": "3bgnrHHwyYRtz3ykzAVImy",
@@ -395,6 +395,36 @@
    "spotifyId": "30T1Q5lsYzCEKzifUWwFWM",
    "title": "체포하겠어",
    "artist": "ILLIT",
+   "source": "kr_weekly"
+  },
+  "finest thing|rescene": {
+   "spotifyId": "4sBBMO44urIJI5QN7pNo7Q",
+   "title": "Finest Thing",
+   "artist": "RESCENE",
+   "source": "kr_weekly"
+  },
+  "meme|rescene": {
+   "spotifyId": "4IShSHFVumlyS3jICnOFw2",
+   "title": "MEME",
+   "artist": "RESCENE",
+   "source": "kr_weekly"
+  },
+  "boogie woogie|nct dream": {
+   "spotifyId": "25aPAxdjuY65ndMA0Q4O8X",
+   "title": "Boogie Woogie",
+   "artist": "NCT DREAM",
+   "source": "kr_daily"
+  },
+  "yours|damons year": {
+   "spotifyId": "7JQH2lBMZ10ztDnpoeq6Ki",
+   "title": "Yours",
+   "artist": "Damons Year",
+   "source": "kr_weekly"
+  },
+  "dragon|rescene": {
+   "spotifyId": "0sxpyjVJivQJUB1dvlm4lG",
+   "title": "Dragon",
+   "artist": "RESCENE",
    "source": "kr_weekly"
   }
  }
